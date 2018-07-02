@@ -94,7 +94,7 @@ data:
               <imagePullSecrets/>
 {{- end }}
 {{- if .Values.Agent.yaml }}
-              <yaml>{{ .Values.Agent.yaml }}</yaml>
+              <yaml>{{ toYaml .Values.Agent.yaml }}</yaml>
 {{- end }}
               <nodeProperties/>
             </org.csanchez.jenkins.plugins.kubernetes.PodTemplate>
