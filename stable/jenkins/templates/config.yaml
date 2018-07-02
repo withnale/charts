@@ -93,8 +93,8 @@ data:
 {{- else }}
               <imagePullSecrets/>
 {{- end }}
-{{- if .Values.Agent.yaml }}
-              <yaml>{{ .Values.Agent.yaml }}</yaml>
+{{- if .Values.Agent.serviceAccount }}
+              <serviceAccount>{{ .Values.Agent.serviceAccount }}</serviceAccount>
 {{- end }}
               <nodeProperties/>
             </org.csanchez.jenkins.plugins.kubernetes.PodTemplate>
